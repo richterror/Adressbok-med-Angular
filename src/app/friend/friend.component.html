@@ -1,0 +1,37 @@
+<div class="container">
+    <button id="top-btn" (click)="addPost()">+ Lägg till</button>
+
+<div class="container">
+    <table class="table table-bordered" id="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Förnamn</th>
+                <th>Efternamn</th>
+                <th>Adress</th>
+                <th>Postnr</th>
+                <th>Stad</th>
+                <th>Email</th>
+                <th>Telefon nr</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of posts">
+                <td>{{post.ID}}</td>
+                <td>{{post.Firstname}}</td>
+                <td>{{post.LastName}}</td>
+                <td>{{post.Adress}}</td>
+                <td>{{post.Zip}}</td>
+                <td>{{post.City}}</td>
+                <td>{{post.Email}}</td>
+                <td>{{post.PhoneNumber}}</td>
+
+                <td>
+                    <!-- <button (click)="editPost(post)">Ändra</button> -->
+                    <button (click)="deletePost(post.ID)">Ta bort</button>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
